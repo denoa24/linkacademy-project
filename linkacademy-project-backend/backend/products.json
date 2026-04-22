@@ -34,7 +34,7 @@
   },
   {
     "id": "54e0eccd-8f36-462b-b68a-8182611d9add",
-    "image": "images/products/kicks-timberland-6-premium-wp.jpg",
+    "image": "images/products/kicks-timberland-6-premium-wp",
     "name": "Timberland 6 Premium Waterproof Boot",
     "rating": {
       "stars": 5,
@@ -45,7 +45,7 @@
   },
   {
     "id": "3ebe75dc-64d2-4137-8860-1f5a963e534b",
-    "image": "images/products/kicks-asics-gel-1130.jpg",
+    "image": "images/products/kicks-asics-gel-1130",
     "name": "ASICS Gel-1130",
     "rating": {
       "stars": 4,
