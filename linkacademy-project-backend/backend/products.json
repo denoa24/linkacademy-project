@@ -34,7 +34,7 @@
   },
   {
     "id": "54e0eccd-8f36-462b-b68a-8182611d9add",
-    "image": "images/products/kicks-timberland-6-premium-wp",
+    "image": "images/products/kicks-timberland-6-premium-wp.jpg",
     "name": "Timberland 6 Premium Waterproof Boot",
     "rating": {
       "stars": 5,
@@ -45,7 +45,7 @@
   },
   {
     "id": "3ebe75dc-64d2-4137-8860-1f5a963e534b",
-    "image": "images/products/kicks-asics-gel-1130",
+    "image": "images/products/kicks-asics-gel-1130.jpg",
     "name": "ASICS Gel-1130",
     "rating": {
       "stars": 4,
@@ -97,38 +97,5 @@
     },
     "priceCents": 2399,
     "keywords": ["jordan 1 retro chicago","j1 retro","j1", "retro chicago"]
-  },
-  {
-    "id": "5968897c-4d27-4872-89f6-5bcb052746d7",
-    "image": "images/products/wheels.jpg",
-    "name": "Wheel Cleaner",
-    "rating": {
-      "stars": 4.5,
-      "count": 235
-    },
-    "priceCents": 2500,
-    "keywords": ["roata","cauciuc","wheel","cleaner","curatare","wheel cleaner"]
-  },
-  {
-    "id": "b86ddc8b-3501-4b17-9889-a3bad6fb585f",
-    "image": "images/products/interiorclean.jpg",
-    "name": "Interior Cleaner",
-    "rating": {
-      "stars": 4.5,
-      "count": 2286
-    },
-    "priceCents": 2690,
-    "keywords": ["interior","clean","interior clean"]
-  },
-  {
-    "id": "aad29d11-ea98-41ee-9285-b916638cac4a",
-    "image": "images/products/tyreshine.jpg",
-    "name": "Tyre Shine",
-    "rating": {
-      "stars": 4.5,
-      "count": 30
-    },
-    "priceCents": 2800,
-    "keywords": ["tyre","janta","tyre shine","shine"]
   }
 ]
