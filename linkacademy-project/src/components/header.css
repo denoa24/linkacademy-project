@@ -64,7 +64,7 @@
 
 .header .middle-section {
   flex: 1;
-  max-width: 500px;
+  max-width: 400px;
   margin-left: 10px;
   margin-right: 10px;
   display: flex;
@@ -91,7 +91,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1a1aff;;
+  background-color: #fa0410;;
   border: none;
   width: 45px;
   height: 40px;

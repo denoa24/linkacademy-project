@@ -30,6 +30,13 @@ export function CheckoutPage({ cart, loadCart }: CheckoutPageProps) {
 
     fetchCheckoutData();
   }, [cart]); // de fiecare data cand cart se schimba, dam refresh la pagina pentru a se updata si payment summary
+
+  let totalQuantity = 0;
+
+  cart.forEach ((cartItem) => {
+    totalQuantity += cartItem.quantity;
+  });
+
   return (
     <>
       <title>Checkout</title>
@@ -47,7 +54,7 @@ export function CheckoutPage({ cart, loadCart }: CheckoutPageProps) {
             
             Checkout (
             <a className="return-to-home-link" href="/">
-              {cart.length}
+              {totalQuantity}
             </a>
             )
           </div>

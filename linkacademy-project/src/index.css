@@ -8,17 +8,19 @@
   --search-text: #07311a;
   --rating-color: #f5a623;
   --price-color: #d4af37;
-  --button-bg: #00c853;
+  --button-bg: #0f0f0f;
   --card-border: rgba(255,255,255,0.06);
+  --button-text: #ffffff;
 }
 
 [data-theme='dark'] {
   --card-bg: #121212;
   --header-bg: #919191;
-  --search-bg: rgb(91 96 255 / 6%);
+  --search-bg: #ffffff;
   --search-text: #dff1e5;
   --rating-color: #39b86a;
   --text-color: #ffffff;
+  --button-bg: #919191;
 }
 
 [data-theme='light'] {
