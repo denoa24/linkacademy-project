@@ -1,9 +1,44 @@
+:root {
+  --bg: #0f0f0f;
+  --card-bg: #121212;
+  --header-bg: #0f0f0f;      
+  --header-text: #ffffff;
+  --logo-text: #ffffff;
+  --search-bg: #eafaf0;
+  --search-text: #07311a;
+  --rating-color: #f5a623;
+  --price-color: #d4af37;
+  --button-bg: #00c853;
+  --card-border: rgba(255,255,255,0.06);
+}
+
+[data-theme='dark'] {
+  --card-bg: #121212;
+  --header-bg: #919191;
+  --search-bg: rgb(91 96 255 / 6%);
+  --search-text: #dff1e5;
+  --rating-color: #39b86a;
+  --text-color: #ffffff;
+}
+
+[data-theme='light'] {
+  --bg: #ffffff;
+  --card-bg: #fff;
+  --header-bg: #0f0f0f;
+  --search-bg: #f2f6f2;
+  --search-text: #222;
+  --text-color: #222;
+  --card-border: rgb(222,222,222);
+}
+
 body {
   font-family: Roboto, Arial;
-  color: rgb(33, 33, 33);
   /* The <body> element has a default margin of 8px
      on all sides. This removes the default margins. */
   margin: 0;
+  background: var(--bg);
+  color: var(--text-color);
+  transition: background .2s ease, color .2s ease;
 }
 
 /* Remove the default margins of <p> elements. */
@@ -25,17 +60,18 @@ input, select, button {
 }
 
 .button-primary {
-  color: rgb(255, 255, 255);
-  background-color: rgb(25, 135, 84);
-  border: 1px solid transparent;
-  border-radius: 5px;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(220, 220, 220, 0.5);
+  font-weight: 600;
+  transition: 0.2s;
 }
 
 .button-primary:hover {
-  background-color: rgba(25, 135, 84, 0.75);
-  border: 1px solid transparent;
+  background: #00e676;
+  transform: scale(1.05);
 }
 
 .button-primary:active {
@@ -102,4 +138,37 @@ select {
 select:focus,
 input:focus {
   outline: 2px solid rgb(25, 135, 84);
+}
+
+.product-rating-count { 
+  color: var(--rating-color) !important; 
+}
+
+
+.product-price { 
+  color: var(--price-color) !important; 
+  font-weight:700; 
+}
+
+.add-to-cart-button, .button-primary {
+  background: var(--button-bg) !important;
+  color: var(--button-text) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.products-grid, .product-container, .product-card {
+  border: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.5);
+}
+
+.products-grid > * { 
+  border-left: none !important; 
+  border-right: none !important; 
+}
+
+.product-container { 
+  background: var(--card-bg); 
 }

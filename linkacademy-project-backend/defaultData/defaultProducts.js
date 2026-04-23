@@ -4,10 +4,10 @@ export const defaultProducts = [
     "image": "images/products/kicks-j1-retro-high.jpg",
     "name": "Jordan 1 Retro High Virgil Abloh Archive Alaska",
     "rating": {
-      "stars": 4.5,
-      "count": 87
+      "stars": 5,
+      "count": 14
     },
-    "priceCents": 1090,
+    "priceCents": 34900,
     "keywords": ["jordan 1","virgil","retro","retro high", "archive", "archive alaska"]
   },
   {
@@ -15,10 +15,10 @@ export const defaultProducts = [
     "image": "images/products/kicks-j5-retro-wg.jpg",
     "name": "Jordan 5 Retro Wolf Grey (2026)",
     "rating": {
-      "stars": 4,
+      "stars": 4.5,
       "count": 127
     },
-    "priceCents": 1090,
+    "priceCents": 24500,
     "keywords": ["jordan 5","retro wolf grey","wolf grey","grey", "jordan"]
   },
   {
@@ -26,10 +26,10 @@ export const defaultProducts = [
     "image": "images/products/kicks-nike-af1-lw.jpg",
     "name": "Nike Air Force 1 Low '07 White",
     "rating": {
-      "stars": 4.5,
-      "count": 56
+      "stars": 5,
+      "count": 567
     },
-    "priceCents": 1200,
+    "priceCents": 9500,
     "keywords": ["af1","air force 1","nike af1","af1 white","af1 low", "nike"]
   },
   {
@@ -37,10 +37,10 @@ export const defaultProducts = [
     "image": "images/products/kicks-timberland-6-premium-wp.jpg",
     "name": "Timberland 6 Premium Waterproof Boot",
     "rating": {
-      "stars": 5,
-      "count": 2197
+      "stars": 4,
+      "count": 98
     },
-    "priceCents": 1200,
+    "priceCents": 14200,
     "keywords": ["timberland","timberland 6","waterproof boot","boot waterproof"]
   },
   {
@@ -48,10 +48,10 @@ export const defaultProducts = [
     "image": "images/products/kicks-asics-gel-1130.jpg",
     "name": "ASICS Gel-1130",
     "rating": {
-      "stars": 4,
-      "count": 37
+      "stars": 2.5,
+      "count": 39
     },
-    "priceCents": 1090,
+    "priceCents": 6500,
     "keywords": ["asics","asics gel","asics gel 1130","1130", "gel-1130"]
   },
   {
@@ -60,9 +60,9 @@ export const defaultProducts = [
     "name": "YZY YS-01",
     "rating": {
       "stars": 4.5,
-      "count": 175
+      "count": 54
     },
-    "priceCents": 1300,
+    "priceCents": 5700,
     "keywords": ["yzy ys-01","yzy","ys-01","ys","slapi"]
   },
   {
@@ -70,10 +70,10 @@ export const defaultProducts = [
     "image": "images/products/kicks-crocs-classic-fulger.jpg",
     "name": "Crocs Classic Clog Lightning McQueen",
     "rating": {
-      "stars": 4.5,
-      "count": 317
+      "stars": 2,
+      "count": 24
     },
-    "priceCents": 1090,
+    "priceCents": 9100,
     "keywords": ["crocs","lightning","mcqueen","fulger mcqueen", "fulger"]
   },
   {
@@ -81,10 +81,10 @@ export const defaultProducts = [
     "image": "images/products/kicks-jordan1-retro-high-colette.jpg",
     "name": "Jordan 1 Retro High",
     "rating": {
-      "stars": 4.5,
-      "count": 144
+      "stars": 5,
+      "count": 2
     },
-    "priceCents": 1090,
+    "priceCents": 1869100,
     "keywords": ["jordan 1","jordan","colette (F&F)","colette","jordan 1 retro high colette"]
   },
   {
@@ -92,10 +92,21 @@ export const defaultProducts = [
     "image": "images/products/kicks-j1-retro-chicago-1994.jpg",
     "name": "Jordan 1 Retro Chicago (1994)",
     "rating": {
-      "stars": 4,
+      "stars": 4.5,
       "count": 99
     },
-    "priceCents": 2399,
+    "priceCents": 199500,
     "keywords": ["jordan 1 retro chicago","j1 retro","j1", "retro chicago"]
+  },
+  {
+    "id": "5968897c-4d27-4872-89f6-5bcb052746d7",
+    "image": "images/products/kicks-maison-mihara-multicolor.jpg",
+    "name": "Maison Mihara Yasuhiro Peterson 23 OG Multicolor",
+    "rating": {
+      "stars": 4.5,
+      "count": 235
+    },
+    "priceCents": 66500,
+    "keywords": ["maison mihara","yasuhiro peterson","23 og","multicolor"]
   }
 ];

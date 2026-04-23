@@ -7,13 +7,13 @@
 
   /* margin-left: auto;
      margin-right auto;
-     Is a trick for centering an element horizontally
-     without needing a container. */
+     centrarea elementului orizontal, fara un div */
   margin-left: auto;
   margin-right: auto;
 }
 
 .orders-page .page-title {
+  color: var(--text-color);
   font-weight: 700;
   font-size: 26px;
   margin-bottom: 25px;
@@ -26,9 +26,9 @@
 }
 
 .orders-page .order-header {
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(222, 222, 222);
-
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,6 +49,7 @@
 
 .orders-page .order-date,
 .orders-page .order-total {
+  color: var(--text-color);
   margin-right: 45px;
 }
 
@@ -87,13 +88,13 @@
 
 .orders-page .order-details-grid {
   padding: 40px 25px;
-  border: 1px solid rgb(222, 222, 222);
+  border: 1px solid var(--card-border);
   border-top: none;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 
   display: grid;
-  grid-template-columns: 110px 1fr 220px;
+  grid-template-columns: 110px 1fr;
   column-gap: 35px;
   row-gap: 60px;
   align-items: center;
@@ -146,11 +147,6 @@
   justify-content: center;
 }
 
-.orders-page .buy-again-icon {
-  width: 20px;
-  margin-right: 10px;
-}
-
 .orders-page .product-actions {
   align-self: start;
 }
@@ -161,12 +157,18 @@
   padding: 8px;
 }
 
+.orders-page .buy-again-icon {
+  width: 20px;
+  margin-right: 10px;
+}
+
 @media (max-width: 800px) {
   .orders-page .buy-again-button {
     margin-bottom: 10px;
   }
+}
 
-  .orders-page .product-actions {
+.orders-page .product-actions {
     /* grid-column: 2 means this element will be placed
        in column 2 in the grid. (Normally, the column that
        an element is placed in is determined by the order
@@ -179,7 +181,6 @@
   .orders-page .track-package-button {
     width: 140px;
   }
-}
 
 @media (max-width: 450px) {
   .orders-page .product-image-container {
@@ -203,18 +204,5 @@
   .orders-page .buy-again-button {
     width: 100%;
     margin-bottom: 15px;
-  }
-
-  .orders-page .product-actions {
-    /* grid-column: auto; undos grid-column: 2; from above.
-      This element will now be placed in its normal column
-      in the grid. */
-    grid-column: auto;
-    margin-bottom: 70px;
-  }
-
-  .orders-page .track-package-button {
-    width: 100%;
-    padding: 12px;
   }
 }

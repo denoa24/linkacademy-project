@@ -1,56 +1,81 @@
-import { NavLink } from 'react-router';
-import CartIcon from '../assets/images/icons/cart-icon.png';
-import SearchIcon from '../assets/images/icons/search-icon.png';
-import LogoWhite from '../assets/images/logo-white.png';
-import MobileLogoWhite from '../assets/images/mobile-logo-white.png';
-import './Header.css';
+import { useState } from 'react';
+import { Link, useNavigate, useSearchParams } from 'react-router';
+import { ThemeToggle } from './ThemeToggle';
+import './header.css';
+import type { CartItem } from '../types/cart';
 
 type HeaderProps = {
-    cart: {
-        productId: string;
-        quantity: number;
-        deliveryOptionId: string;
-    }[];
-}
+  cart: CartItem[];
+};
+
 
 export function Header({ cart }: HeaderProps) {
-    let totalQuantity = 0;
 
-    cart.forEach((cartItem) => {
-        totalQuantity += cartItem.quantity;
-    });
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
 
-    return (
-        <div className="header">
-            <div className="left-section">
-                <NavLink to="/" className="header-NavLink">
-                    <img className="logo"
-                        src={LogoWhite} />
-                    <img className="mobile-logo"
-                        src={MobileLogoWhite} />
-                </NavLink>
-            </div>
+  const searchText = searchParams.get('search');
 
-            <div className="middle-section">
-                <input className="search-bar" type="text" placeholder="Search" />
+   const [search, setSearch] = useState(searchText || '');
 
-                <button className="search-button">
-                    <img className="search-icon" src={SearchIcon} />
-                </button>
-            </div>
+  const updateSearchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(event.target.value);
+  };
 
-            <div className="right-section">
-                <NavLink className="orders-link header-link" to="/orders">
+  const searchProducts = () => {
+    navigate(`/?search=${search}`);
+  };
 
-                    <span className="orders-text">Orders</span>
-                </NavLink>
+  let totalQuantity = 0;
 
-                <NavLink className="cart-link header-link" to="/checkout">
-                    <img className="cart-icon" src={CartIcon} />
-                    <div className="cart-quantity">{totalQuantity}</div>
-                    <div className="cart-text">Cart</div>
-                </NavLink>
-            </div>
-        </div>
-    );
+  cart.forEach ((cartItem) => {
+    totalQuantity += cartItem.quantity;
+  });
+
+  const handleSearchKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    const keyPressed = event.key;
+
+    if (keyPressed === 'Enter') {
+      searchProducts();
+
+    } else if (keyPressed === 'Escape') {
+      setSearch('');
+    }
+  };
+
+
+  return (
+    <div className="header">
+      <div className="left-section">
+        <Link to="/" className="header-link">
+          <img className="logo" src="images/logo-white.png" />
+          <img className="mobile-logo" src="images/mobile-logo-white.png" />
+        </Link>
+      </div>
+
+      <div className="middle-section">
+        <input className="search-bar" type="text" placeholder="Search"
+          value={search} onChange={updateSearchInput} onKeyDown={handleSearchKeyDown}
+        />
+
+        <button className="search-button"
+          onClick={searchProducts}>
+          <img className="search-icon" src="images/icons/search-icon.png" />
+        </button>
+      </div>
+
+      <div className="right-section">
+        <ThemeToggle />
+        <Link className="orders-link header-link" to="/orders">
+          <span className="orders-text">Orders</span>
+        </Link>
+
+        <Link className="cart-link header-link" to="/checkout">
+          <img className="cart-icon" src="images/icons/cart-icon.png" />
+          <div className="cart-quantity">{totalQuantity}</div>
+          <div className="cart-text">Cart</div>
+        </Link>
+      </div>
+    </div>
+  );
 }
