@@ -7,6 +7,7 @@ import "./checkout-header.css";
 import "./CheckoutPage.css";
 import type { CartItem, DeliveryOption} from "../../types/cart";
 import type { PaymentSummary as PaymentSummaryType } from "../../types/cart";
+import { setFavicon } from "../../utils/favicon";
 
 type CheckoutPageProps = {
   cart: CartItem[];
@@ -14,6 +15,10 @@ type CheckoutPageProps = {
 };
 
 export function CheckoutPage({ cart, loadCart }: CheckoutPageProps) {
+  useEffect(() => {
+  setFavicon("./public/carticon.svg");
+}, []);
+
   const [deliveryOptions, setDeliveryOptions] = useState<DeliveryOption[]>([]); // array e mai bun pentru liste
   const [paymentSummary, setPaymentSummary] = useState<PaymentSummaryType | null>(null); // null e mai bun pentru obiect
 
@@ -39,7 +44,7 @@ export function CheckoutPage({ cart, loadCart }: CheckoutPageProps) {
 
   return (
     <>
-      <title>Checkout</title>
+      <title>Checkout - noir kicks</title>
 
       <div className="checkout-header">
         <div className="header-content">
@@ -61,7 +66,6 @@ export function CheckoutPage({ cart, loadCart }: CheckoutPageProps) {
 
           <div className="checkout-header-right-section">
             <ThemeToggle />
-            <img src="images/icons/checkout-lock-icon.png" />
           </div>
         </div>
       </div>

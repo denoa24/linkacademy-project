@@ -5,6 +5,7 @@ import { Header } from "../../components/Header";
 import { formatMoney } from "../../utils/money";
 import "./OrdersPage.css";
 import type { CartItem as cartItem, Order } from "../../types/cart";
+import { setFavicon } from "../../utils/favicon";
 
 type OrdersPageProps = {
   cart: cartItem[];
@@ -12,6 +13,10 @@ type OrdersPageProps = {
 };
 
 export function OrdersPage({ cart, loadCart }: OrdersPageProps) {
+  useEffect(() => {
+    setFavicon("./public/orders-favicon.png");
+  }, []);
+
   const [orders, setOrders] = useState<Order[]>([]);
 
   // fetch orders de la API
@@ -27,7 +32,7 @@ export function OrdersPage({ cart, loadCart }: OrdersPageProps) {
     <>
       <Header cart={cart} />
 
-      <title>Orders</title>
+      <title>Orders - noir kicks</title>
 
       <div className="orders-page">
         <div className="page-title">Your Orders</div>

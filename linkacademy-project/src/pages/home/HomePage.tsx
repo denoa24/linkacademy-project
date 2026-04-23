@@ -5,13 +5,19 @@ import { Header } from "../../components/Header";
 import { ProductsGrid } from "./productsGrid";
 import "./HomePage.css";
 import type { CartItem, Product } from "../../types/cart";
+import { setFavicon } from "../../utils/favicon";
 
 type HomePageProps = {
   cart: CartItem[];
   loadCart: () => Promise<void>;
 };
 
+
 export function HomePage({ cart, loadCart }: HomePageProps) {
+  useEffect(() => {
+  setFavicon("./public/home-favicon.png");
+}, []);
+
   const [products, setProducts] = useState<Product[]>([]);
   const [searchParams] = useSearchParams();
   const search = searchParams.get("search");
@@ -27,7 +33,7 @@ export function HomePage({ cart, loadCart }: HomePageProps) {
 
   return (
     <>
-      <title>linkacademy-project</title>
+      <title>Home - noir kicks</title>
 
       <Header cart={cart} />
 
