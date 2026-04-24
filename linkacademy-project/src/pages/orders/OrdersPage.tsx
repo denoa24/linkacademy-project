@@ -14,7 +14,7 @@ type OrdersPageProps = {
 
 export function OrdersPage({ cart, loadCart }: OrdersPageProps) {
   useEffect(() => {
-    setFavicon("./public/orders-favicon.png");
+    setFavicon("/orders-favicon.png");
   }, []);
 
   const [orders, setOrders] = useState<Order[]>([]);

@@ -16,7 +16,7 @@ type CheckoutPageProps = {
 
 export function CheckoutPage({ cart, loadCart }: CheckoutPageProps) {
   useEffect(() => {
-  setFavicon("./public/carticon.svg");
+  setFavicon("/carticon.svg");
 }, []);
 
   const [deliveryOptions, setDeliveryOptions] = useState<DeliveryOption[]>([]); // array e mai bun pentru liste

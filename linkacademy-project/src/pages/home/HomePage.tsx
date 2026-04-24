@@ -15,7 +15,7 @@ type HomePageProps = {
 
 export function HomePage({ cart, loadCart }: HomePageProps) {
   useEffect(() => {
-  setFavicon("./public/home-favicon.png");
+  setFavicon("/home-favicon.png");
 }, []);
 
   const [products, setProducts] = useState<Product[]>([]);
